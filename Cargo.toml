@@ -261,6 +261,7 @@ webrtc-sctp = { git = "https://github.com/rustdesk-org/webrtc", rev = "49c89bd8d
 [package.metadata.winres]
 LegalCopyright = "© 2026 CrieAtive Company. Baseado no RustDesk (AGPL-3.0)."
 ProductName = "crieIAtive Desk"
+CompanyName = "CrieAtive Company"
 FileDescription = "crieIAtive Desk - Acesso remoto"
 OriginalFilename = "rustdesk.exe"
 
