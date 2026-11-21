@@ -176,6 +176,9 @@ jobs:
           $msi = Get-ChildItem ./Package/bin/*/Release/en-us/Package.msi | Select-Object -First 1
           mv $msi.FullName "../../SignOutput/$env:OUT_NAME-$env:VERSION-x86_64.msi"
           popd
+          # cópias com nome fixo: desk.crieiative.com/baixar aponta para releases/latest/download/<nome fixo>
+          Copy-Item "./SignOutput/$env:OUT_NAME-$env:VERSION-x86_64.exe" "./SignOutput/$env:OUT_NAME-windows.exe"
+          Copy-Item "./SignOutput/$env:OUT_NAME-$env:VERSION-x86_64.msi" "./SignOutput/$env:OUT_NAME-windows.msi"
           Get-ChildItem ./SignOutput | Format-Table Name, Length
 
       - name: Upload artifact
