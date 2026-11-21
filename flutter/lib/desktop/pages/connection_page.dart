@@ -80,9 +80,9 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
 
     setupServerWidget() => Flexible(
           child: Offstage(
-            offstage: !(!_svcStopped.value &&
-                stateGlobal.svcStatus.value == SvcStatus.ready &&
-                _svcIsUsingPublicServer.value),
+            // crieIAtive Desk: o servidor da CrieAtive já vem embutido; a dica de
+            // "configure seu próprio servidor" não se aplica.
+            offstage: true,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
